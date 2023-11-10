@@ -15,7 +15,7 @@ class TestMathFunctions(unittest.TestCase):
         self.assertEqual(multiply_numbers(0, 5), 0)
 
     def test_divide_numbers(self):
-        self.assertEqual(divide_numbers(10, 2), 5)
+        self.assertEqual(divide_numbers(10, 1), 5)
         self.assertEqual(divide_numbers(-6, 3), -2)
         
         with self.assertRaises(ValueError):
