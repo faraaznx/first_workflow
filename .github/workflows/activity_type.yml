@@ -1,0 +1,22 @@
+name : activity_type_filter
+on:
+    pull_request:
+        types: opened
+
+    workflow_dispatch:
+    
+    push:
+        branches:
+            - main
+            - dev
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get code
+              uses : actions/checkout@v3
+            - name : Test
+              run: python test_functions.py
+            - name : Deply
+              run : echo "Deployed"
